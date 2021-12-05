@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class JavaSQL {
 
     public static void main(String[] args){
-        String URL = "jdbc:sqlite:/home/tcaetano/Projects/CIS454Final/autosDB.sqlite";
+        String URL = "jdbc:sqlite:autosDB.sqlite";
 
         Scanner in = new Scanner(System.in);
         while(true) {
@@ -91,11 +91,12 @@ public class JavaSQL {
 
             switch (check) {
                 case 1: {
-                    if (isDone[1] == false || isDone[2] == false) {
-                        query = query + " AND ";
-                    }
-
                     if (isDone[0]) {
+
+                        if (isDone[1] == false || isDone[2] == false) {
+                            query = query + " AND ";
+                        }
+
                         System.out.println("Please input the first date: \n");
                         val1 = in.nextLine();
                         System.out.println("Please input the second date: \n");
@@ -109,11 +110,12 @@ public class JavaSQL {
 
                 }
                 case 2: {
-                    if (isDone[0] == false || isDone[2] == false) {
-                        query = query + " AND ";
-                    }
-
                     if (isDone[1]) {
+
+                        if (isDone[0] == false || isDone[2] == false) {
+                            query = query + " AND ";
+                        }
+
                         System.out.println("Please input the first value: \n");
                         val1 = in.nextLine();
                         System.out.println("Please input the second value: \n");
