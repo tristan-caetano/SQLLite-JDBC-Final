@@ -180,7 +180,6 @@ public class  JavaSQL {
                     if (!(isDone[0]) || !(isDone[1])) {
                         query = "WHERE " + query;
                     }
-                    System.out.println((!(isDone[0]) || !(isDone[1])));
                     rangeSearch(query, query2, addSelect, url);
                     return;
                 }
@@ -297,6 +296,8 @@ public class  JavaSQL {
                         e.printStackTrace();
                     }
 
+                    break;
+
                 }
 
                 // Adding involvements to database
@@ -373,6 +374,7 @@ public class  JavaSQL {
                         System.out.println("An error has occured.");
                         e.printStackTrace();
                     }
+                    break;
                 }
 
                 // Going back to previous menu
